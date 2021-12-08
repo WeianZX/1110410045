@@ -1,0 +1,26 @@
+using std::cout; using std::endl;
+using std::copy; using std::string;
+string strcat(string x, string y)
+{
+    x.append(y);
+    return x;
+}
+int main() {
+    string str1;
+    string str2;
+       str1 = strcat(str1,"Temporary string");
+    str2 = strcat(str2 ," appended sequence");
+    str1 = strcat(str1,str2);
+      cout << str1 << endl;
+ 
+
+    const char* str3 = str1.c_str();
+    const char* str4 = str2.c_str();
+        if (strcmp(str3,str4) == 0) {
+            printf("equal\n");
+        }
+        else {
+            printf("not equal\n");
+        }
+        return EXIT_SUCCESS;
+}
